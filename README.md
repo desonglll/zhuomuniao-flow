@@ -7,4 +7,5 @@ docker load -i flask-react-app.tar
 
 docker run -p 8080:8080 -p 8000:8000 flask-react-app
 
+docker build --platform=linux/amd64 -t flask-react-app .
 ```
