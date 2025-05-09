@@ -1,0 +1,161 @@
+/* App.css for Deepseek Traffic Analysis System */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    --primary-color: #1890ff;
+    --secondary-color: #096dd9;
+    --background-color: #f5f5f5;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --text-secondary: #666666;
+    --border-color: #e8e8e8;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#root {
+    width: 100%;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+}
+
+h1 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.input-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.prompt-section, .query-section {
+    flex: 1;
+}
+
+.sample-traffic-section {
+    margin-bottom: 20px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    resize: vertical;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+.prompt-textarea, .query-textarea {
+    min-height: 150px;
+    margin-bottom: 0;
+}
+
+.sample-traffic-textarea {
+    min-height: 150px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+}
+
+.response {
+    background-color: rgba(24, 144, 255, 0.05);
+    border-radius: 8px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+}
+
+.response h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.response p {
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #fafafa;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .input-container {
+        flex-direction: column;
+    }
+
+    textarea {
+        min-height: 120px;
+    }
+}
